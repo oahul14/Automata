@@ -97,10 +97,10 @@ def life(initial_state, nsteps, periodic=False):
         :param n: the size of the square mesh
             :return: the square mesh with an outer boundary filled with False
         '''
-        mesh[0, :] = False
-        mesh[-1, :] = False
-        mesh[:, 0] = False
-        mesh[:, -1] = False
+        mesh[0:2, :] = False
+        mesh[-2:, :] = False
+        mesh[:, 0:2] = False
+        mesh[:, -2:] = False
         return mesh
 
     def periodic_border(mesh):
